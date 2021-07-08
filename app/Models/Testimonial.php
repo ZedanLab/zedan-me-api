@@ -34,6 +34,7 @@ class Testimonial extends Model implements HasMedia
         'email',
         'position',
         'body',
+        'stars',
         'is_published',
     ];
 
@@ -51,6 +52,7 @@ class Testimonial extends Model implements HasMedia
      */
     protected $casts = [
         'is_published' => 'boolean',
+        'stars'        => 'integer',
     ];
 
     /*

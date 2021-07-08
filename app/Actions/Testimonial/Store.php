@@ -25,6 +25,7 @@ class Store
             'email'    => 'required|string|email',
             'position' => 'required|string|min:3',
             'body'     => 'required|string|min:20',
+            'stars'    => 'required|integer|max:5',
         ];
     }
 

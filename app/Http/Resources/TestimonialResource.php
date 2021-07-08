@@ -22,6 +22,7 @@ class TestimonialResource extends JsonResource
             'position'           => $this->resource->position,
             'email'              => $this->resource->email,
             'body'               => $this->resource->body,
+            'stars'              => $this->resource->stars,
             'createdAt'          => $this->resource->created_at,
             'createdAtForHumans' => $this->resource->created_at->diffForHumans(),
         ];
