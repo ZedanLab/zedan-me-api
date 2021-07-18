@@ -33,7 +33,7 @@ class TestimonialSubmitted extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->subject("I'm delighted of your testimonial, it'll be published as soon as possible. Thank you!")
+        return $this->subject('Thank you for Submitting your Testimonial')
                     ->view('emails.testimonials.submitted', $this->testimonial);
     }
 }

@@ -35,7 +35,7 @@ class TestimonialController extends Controller
         $testimonial = Store::run($request->all());
 
         return JsonResponse::json('ok', [
-            'message' => "I'm delighted of your testimonial, it'll be published as soon as possible. Thank you!",
+            'message' => "I'm delighted of your testimonial 😍, it'll be published as soon as possible. Thank you!",
             'data'    => $testimonial,
         ]);
     }
