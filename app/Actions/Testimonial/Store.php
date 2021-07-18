@@ -30,6 +30,18 @@ class Store
     }
 
     /**
+     * Define validation attributes.
+     *
+     * @return array
+     */
+    public function getValidationAttributes()
+    {
+        return [
+            'body' => 'testimonial',
+        ];
+    }
+
+    /**
      * Execute the action and return a result.
      *
      * @return mixed
