@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\ContactMessageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::apiResource('testimonials', TestimonialController::class)->only(['index', 'store']);
+Route::post('contact-me', [ContactMessageController::class, 'store'])->name('contact.message.store');
