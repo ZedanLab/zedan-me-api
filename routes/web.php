@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\MediaCenter\UrlController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MediaCenter\UrlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +19,5 @@ Route::permanentRedirect('/', config('app.website_url'));
 Route::group(['prefix' => 'media', 'as' => 'mediacenter::'], function () {
     Route::group(['prefix' => 'show'], function () {
         Route::get('{collection}/{conversionName}/{media}/{itemName}.jpg', [UrlController::class, 'display'])->name('item.display');
-        Route::get('responsive/{collection}/{conversionName}/{media}/{itemName?}', [UrlController::class, 'displayResponsiveImage'])->name('responsive.display');
     });
 });

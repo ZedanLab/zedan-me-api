@@ -31,26 +31,4 @@ class UrlGenerator extends DefaultUrlGenerator
 
         return 'https://'.config('app.url')."/media/show/{$collection}/{$conversion}/{$media}/{$name}.jpg";
     }
-
-    /**
-     * Get the url to the directory containing responsive images.
-     *
-     * @return string
-     */
-    public function getResponsiveImagesDirectoryUrl(): string
-    {
-        return route(
-            'mediacenter::responsive.display',
-            [
-                // Collection name.
-                $this->media->collection_name,
-                // Conversion name or set DEFAULT conversion.
-                optional($this->conversion)->getName() ?? 'default',
-                // Media item.
-                Media::getEncodedId($this->media->id),
-            ]
-        ).'/';
-
-        return $this->getBaseMediaDirectoryUrl().'/'.$this->pathGenerator->getPathForResponsiveImages($this->media);
-    }
 }
