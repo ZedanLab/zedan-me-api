@@ -1,13 +1,11 @@
 build:
+    environment:
+            mysql: '5.7'
     nodes:
         analysis:
             tests:
                 override:
                     - php-scrutinizer-run
-        coverage:
-            tests:
-                override:
-                    - command: composer test
 
 filter:
     paths:
