@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\ContactMessageController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestimonialController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------

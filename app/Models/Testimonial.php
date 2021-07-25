@@ -2,18 +2,18 @@
 
 namespace App\Models;
 
+use App\Http\Resources\TestimonialResource;
 use App\Traits\Hashidable;
-use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Database\Eloquent\Builder;
-use App\Http\Resources\TestimonialResource;
+use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
- * App\Models\Testimonial
+ * App\Models\Testimonial.
  *
  * @property int $id
  * @property string $name
@@ -101,7 +101,7 @@ class Testimonial extends Model implements HasMedia
      */
     public function getAvatarAttribute()
     {
-        return !blank($media = $this->getFirstMediaUrl('avatar', 'big')) ? $media : url(Storage::url('public/avatar.jpg'));
+        return ! blank($media = $this->getFirstMediaUrl('avatar', 'big')) ? $media : url(Storage::url('public/avatar.jpg'));
     }
 
     /**
@@ -111,7 +111,7 @@ class Testimonial extends Model implements HasMedia
      */
     public function getAvatarThumbAttribute()
     {
-        return !blank($media = $this->getFirstMediaUrl('avatar', 'thumb')) ? $media : url(Storage::url('public/avatar.jpg'));
+        return ! blank($media = $this->getFirstMediaUrl('avatar', 'thumb')) ? $media : url(Storage::url('public/avatar.jpg'));
     }
 
     /*
