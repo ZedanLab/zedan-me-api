@@ -9,9 +9,9 @@
  * @see https://github.com/vinkla/laravel-hashids
  */
 
+use App\Models\ContactMessage;
 use App\Models\Media;
 use App\Models\Testimonial;
-use App\Models\ContactMessage;
 
 return [
 
@@ -41,15 +41,15 @@ return [
 
     'connections' => [
         Testimonial::class    => [
-            'salt'   => Testimonial::class . 'DjXLuDiMMJ41FmrrOw6ySEFlagdt29dBYElyj1uz7Pf4rKoKzg',
+            'salt'   => Testimonial::class.'DjXLuDiMMJ41FmrrOw6ySEFlagdt29dBYElyj1uz7Pf4rKoKzg',
             'length' => 20,
         ],
         Media::class          => [
-            'salt'   => Media::class . 'VfaF3i8ymgontSlikowBB4pS4NxMKWBgg4mSdr4GGtZMqKpl5r',
+            'salt'   => Media::class.'VfaF3i8ymgontSlikowBB4pS4NxMKWBgg4mSdr4GGtZMqKpl5r',
             'length' => 20,
         ],
         ContactMessage::class => [
-            'salt'   => ContactMessage::class . 'qJZAIR5Vu4IbWe9Derfj1YskXQTahndIyF1fXBKVeSYJgRc8LY',
+            'salt'   => ContactMessage::class.'qJZAIR5Vu4IbWe9Derfj1YskXQTahndIyF1fXBKVeSYJgRc8LY',
             'length' => 20,
         ],
     ],

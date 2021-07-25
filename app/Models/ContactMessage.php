@@ -7,7 +7,7 @@ use App\Traits\Hashidable;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Models\ContactMessage
+ * App\Models\ContactMessage.
  *
  * @property int $id
  * @property string $name
